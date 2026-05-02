@@ -12,6 +12,17 @@ const display = Space_Grotesk({
   variable: "--font-display"
 });
 
+export const viewport: import('next').Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
+export const metadata: Metadata = {
+  title: 'Surya || AI Engineer',
+  description: 'Portofolio Profesional AI Engineer',
+};
+
 
 export default function RootLayout({
   children

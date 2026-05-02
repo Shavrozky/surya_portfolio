@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { mlenzOverview } from "@/data/mlenz";
+import { motion } from "framer-motion";
+
 
 
 const highlights = [

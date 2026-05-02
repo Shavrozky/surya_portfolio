@@ -29,6 +29,7 @@ body {
     radial-gradient(circle at 85% 15%, rgba(0, 246, 255, 0.18), transparent 22%),
     linear-gradient(135deg, #05060f 0%, #090d1f 48%, #05060f 100%);
   color: var(--text);
+  overflow-x: hidden;
 }
 
 a {
@@ -1036,4 +1037,19 @@ h1 {
   .field textarea {
     transition: none;
   }
+}
+
+.capability-card:hover,
+.project-card:hover,
+.glass-panel:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(0, 246, 255, 0.15);
+  border-color: rgba(0, 246, 255, 0.4);
+}
+
+.capability-card:hover {
+  box-shadow:
+    0 0 0 1px rgba(0, 246, 255, 0.2),
+    0 0 30px rgba(0, 246, 255, 0.25),
+    0 20px 60px rgba(3, 6, 20, 0.6);
 }
