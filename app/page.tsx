@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { mlenzOverview } from "@/data/mlenz";
-import { motion } from "framer-motion";
+import { FadeIn } from "@/components/motion/fade-in";
 
 
 
@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       <section className="hero-grid">
-        <div className="hero-copy glass-panel neon-float">
+        <FadeIn className="hero-copy glass-panel neon-float">
           <p className="eyebrow">MUHAMMAD RIZKY SURYANATA</p>
           <h1>Membangun produk AI yang presisi, adaptif, dan siap dipakai.</h1>
           <p className="hero-text">
@@ -190,9 +190,9 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </FadeIn>
 
-        <div className="hero-visual glass-panel neon-float neon-float-delay" id="about">
+        <FadeIn className="hero-visual glass-panel neon-float neon-float-delay" delay={0.1} id="about">
           <div className="orbit-ring orbit-ring-a" />
           <div className="orbit-ring orbit-ring-b" />
           <div className="scan-line" />
@@ -237,13 +237,13 @@ export default function Home() {
 
           <div className="visual-stack">
             {stats.map((stat) => (
-              <div className="stat-card" key={stat.label}>
+              <FadeIn className="stat-card" delay={0.08} distance={16} key={stat.label}>
                 <span>{stat.value}</span>
                 <small>{stat.label}</small>
-              </div>
+              </FadeIn>
             ))}
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       
@@ -261,7 +261,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="section-block" id="expertise">
+      <FadeIn className="section-block" id="expertise">
         <div className="section-heading section-heading-center">
           <p className="eyebrow">CORE EXPERTISE</p>
           <h2>Fondasi yang saya bawa untuk membangun produk AI yang siap tumbuh.</h2>
@@ -269,15 +269,15 @@ export default function Home() {
 
         <div className="capabilities-grid stretch-grid">
           {capabilities.map((item) => (
-            <article className="capability-card glass-panel" key={item.title}>
+            <FadeIn className="capability-card glass-panel" distance={18} key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-            </article>
+            </FadeIn>
           ))}
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="section-block two-column-section" id="education">
+      <FadeIn className="section-block two-column-section" id="education">
         <div className="section-heading compact-heading section-heading-center">
           <p className="eyebrow">EDUCATION</p>
           <h2>Pendidikan dan jalur belajar yang membentuk fondasi engineering saya.</h2>
@@ -285,7 +285,7 @@ export default function Home() {
 
         <div className="education-list experience-list glass-panel">
           {educationItems.map((item) => (
-            <article className="education-item experience-item" key={`${item.period}-${item.title}`}>
+            <FadeIn className="education-item experience-item" distance={18} key={`${item.period}-${item.title}`}>
               <div className="education-meta experience-meta">
                 <span>{item.period}</span>
                 <strong>{item.institution}</strong>
@@ -294,12 +294,12 @@ export default function Home() {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
-            </article>
+            </FadeIn>
           ))}
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="section-block two-column-section" id="experience">
+      <FadeIn className="section-block two-column-section" id="experience">
         <div className="section-heading compact-heading section-heading-center">
           <p className="eyebrow">EXPERIENCE</p>
           <h2>Perjalanan membangun AI product dari eksperimen ke implementasi.</h2>
@@ -307,7 +307,7 @@ export default function Home() {
 
         <div className="experience-list glass-panel">
           {experiences.map((item) => (
-            <article className="experience-item" key={`${item.period}-${item.role}`}>
+            <FadeIn className="experience-item" distance={18} key={`${item.period}-${item.role}`}>
               <div className="experience-meta">
                 <span>{item.period}</span>
                 <strong>{item.company}</strong>
@@ -316,12 +316,12 @@ export default function Home() {
                 <h3>{item.role}</h3>
                 <p>{item.summary}</p>
               </div>
-            </article>
+            </FadeIn>
           ))}
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="section-block" id="projects">
+      <FadeIn className="section-block" id="projects">
         <div className="section-heading section-heading-center">
           <p className="eyebrow">SELECTED WORKS</p>
           <h2>Project yang memadukan Machine Learning dengan kebutuhan operasional.</h2>
@@ -329,9 +329,10 @@ export default function Home() {
 
         <div className="projects-grid stretch-grid">
           {projects.map((project) => (
-            <article
+            <FadeIn
               className="project-card glass-panel"
               key={project.title}
+              distance={18}
               style={{ "--accent": project.accent } as CSSProperties}
             >
               <span className="project-category">{project.category}</span>
@@ -342,13 +343,13 @@ export default function Home() {
                   View case study
                 </Link>
               ) : null}
-            </article>
+            </FadeIn>
           ))}
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="section-block two-column-layout" id="stack-contact">
-        <div className="stack-panel glass-panel" id="stack">
+      <FadeIn className="section-block two-column-layout" id="stack-contact">
+        <FadeIn className="stack-panel glass-panel" distance={18} id="stack">
           <div className="section-heading compact-heading">
             <p className="eyebrow">TECH STACK</p>
             <h2>Tooling yang saya andalkan untuk shipping sistem AI.</h2>
@@ -368,9 +369,9 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
+        </FadeIn>
 
-        <section className="contact-panel glass-panel" id="contact">
+        <FadeIn className="contact-panel glass-panel" delay={0.08} distance={18} id="contact">
           <div className="section-heading compact-heading">
             <p className="eyebrow">CONTACT</p>
             <h2>Punya ide AI product atau machine learning workflow?</h2>
@@ -425,8 +426,8 @@ export default function Home() {
               </a>
             </div>
           </form>
-        </section>
-      </section>
+        </FadeIn>
+      </FadeIn>
     </main>
   );
 }

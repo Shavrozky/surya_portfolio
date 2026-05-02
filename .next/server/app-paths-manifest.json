@@ -1,6 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/projects/mzone/page": "app/projects/mzone/page.js",
-  "/projects/mia/page": "app/projects/mia/page.js",
-  "/projects/mlenz/page": "app/projects/mlenz/page.js"
+  "/projects/mlenz/page": "app/projects/mlenz/page.js",
+  "/page": "app/page.js"
 }
