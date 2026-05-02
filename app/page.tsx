@@ -80,9 +80,9 @@ const projects = [
   },
   {
     title: "Mzone",
-    category: "Operational Monitoring",
+    category: "Safety Call Center",
     description:
-      "Platform monitoring untuk area operasional dengan fokus pada visibility, alerting, dan pengawasan aktivitas secara terstruktur.",
+      "Platform untuk menghubungkan operasional tambang dengan tim keselamatan dan tim emergency dalam satu aplikasi, dengan fitur untuk melaporkan insiden, mengirim alarm, dan mengelola respon tim secara terstruktur.",
     accent: "#00f6ff",
     href: "/projects/mzone"
   },
@@ -322,7 +322,7 @@ export default function Home() {
       <section className="section-block" id="projects">
         <div className="section-heading section-heading-center">
           <p className="eyebrow">SELECTED WORKS</p>
-          <h2>Project yang memadukan machine learning dengan kebutuhan operasional.</h2>
+          <h2>Project yang memadukan Machine Learning dengan kebutuhan operasional.</h2>
         </div>
 
         <div className="projects-grid stretch-grid">
@@ -370,7 +370,7 @@ export default function Home() {
 
         <section className="contact-panel glass-panel" id="contact">
           <div className="section-heading compact-heading">
-            <p className="eyebrow">CONTACT NODE</p>
+            <p className="eyebrow">CONTACT</p>
             <h2>Punya ide AI product atau machine learning workflow?</h2>
           </div>
 
@@ -381,7 +381,7 @@ export default function Home() {
           </p>
 
           <form
-            action="mailto:surya@neonlab.dev"
+            action="mailto:m.rizkysuryanata@gmail.com"
             className="contact-form"
             encType="text/plain"
             method="post"
@@ -418,8 +418,8 @@ export default function Home() {
               <button className="primary-btn" type="submit">
                 Kirim Inquiry
               </button>
-              <a className="secondary-btn" href="mailto:surya@neonlab.dev">
-                surya@neonlab.dev
+              <a className="secondary-btn" href="mailto:m.rizkysuryanata@gmail.com">
+                m.rizkysuryanata@gmail.com
               </a>
             </div>
           </form>

@@ -533,12 +533,15 @@ h1 {
 }
 
 .section-heading-center {
-  display: grid;
-  justify-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
   text-align: center;
   width: 100%;
   max-width: 900px;
-  margin-inline: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .section-heading h2,
@@ -872,6 +875,8 @@ h1 {
   .projects-grid,
   .two-column-layout,
   .project-detail-grid,
+  .stretch-grid,
+  .stack-grid,
   .mlenz-grid-detail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -976,6 +981,8 @@ h1 {
   .project-detail-grid,
   .mlenz-grid-detail,
   .visual-stack,
+  .stretch-grid,
+  .stack-grid,
   .contact-form {
     grid-template-columns: 1fr;
   }
